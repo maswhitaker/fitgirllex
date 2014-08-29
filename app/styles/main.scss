@@ -10,3 +10,13 @@ $third-color: #8B4A43;
 
 $font1: Exo;
 $font2: Actor;
+
+header{
+  font-family: $font1;
+  img{
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 300px;
+  }
+}

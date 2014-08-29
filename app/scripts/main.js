@@ -24,6 +24,29 @@ var AboutView = Parse.View.extend({
   render: function(){
     this.$el.html(this.template(this.model));
   }
-})
+});
 
-new AboutView();
+var Router = Parse.Router.extend({
+  routes: {
+    "": "homepage",
+    "contact": "contactpage",
+    "about": "aboutpage",
+    "service": "servicepage"
+  },
+  homepage: function(){
+    new HomeView();
+  },
+  contactpage: function(){
+
+  },
+  aboutpage: function(){
+    new AboutView();
+  },
+  servicepage: function(){
+
+  }
+});
+
+var approuter = new Router();
+
+Parse.history.start();
