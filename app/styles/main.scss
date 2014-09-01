@@ -17,13 +17,32 @@ body{
 
 header{
   font-family: $font1;
+  #headerblock{
+    width: 200px;
+    color: white;
+    height: 100px;
+    background-color: $third-color;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    h1{
+      text-align: center;
+    }
+  }
+  h2{
+    text-align: center;
+    color: white;
+    font-size: .9em;
+  }
   nav{
     height: 40px;
     width: 100%;
     background: $third-color;
     border-bottom: solid 5px white;
+    text-align: center;
     span{
       @include button(pill);
+      color: white;
     }
   }
   img{
