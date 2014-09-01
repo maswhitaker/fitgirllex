@@ -11,12 +11,27 @@ $third-color: #8B4A43;
 $font1: Exo;
 $font2: Actor;
 
+body{
+  background-color: $first-color;
+}
+
 header{
   font-family: $font1;
+  nav{
+    height: 40px;
+    width: 100%;
+    background: $third-color;
+    border-bottom: solid 5px white;
+    span{
+      @include button(pill);
+    }
+  }
   img{
     width: 95%;
     margin-left: 10px;
     margin-right: 10px;
     height: 300px;
+    border-radius: 30px;
+    border: solid $second-color 2px;
   }
 }
