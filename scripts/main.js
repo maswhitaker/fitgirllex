@@ -26,6 +26,19 @@ var AboutView = Parse.View.extend({
   }
 });
 
+var ContactView = Parse.View.extend({
+  initialize: function(){
+    $(".container").html(this.el);
+    this.render();
+  },
+
+  render: function(){
+    this.$el.html(this.template(this.model));
+  },
+
+  template: _.template($("#contact").html())
+})
+
 var Router = Parse.Router.extend({
   routes: {
     "": "homepage",
@@ -37,7 +50,7 @@ var Router = Parse.Router.extend({
     new HomeView();
   },
   contactpage: function(){
-
+    new ContactView();
   },
   aboutpage: function(){
     new AboutView();
