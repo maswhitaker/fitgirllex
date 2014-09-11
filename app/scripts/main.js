@@ -37,14 +37,42 @@ var ContactView = Parse.View.extend({
   },
 
   template: _.template($("#contact").html())
-})
+});
+
+var ServiceView = Parse.View.extend({
+  initialize: function(){
+    $(".container").html(this.el);
+    this.render();
+  },
+
+  render: function(){
+    this.$el.html(this.template(this.model));
+  },
+
+  template: _.template($("#service").html())
+});
+
+var EnterView = Parse.View.extend({
+  initialize: function(){
+    $(".container").html(this.el);
+    this.render();
+  },
+  render: function(){
+    this.$el.html(this.template(this.model));
+  },
+  template: _.template($("#enter").html())
+});
 
 var Router = Parse.Router.extend({
   routes: {
-    "": "homepage",
+    "": "enter",
+    "home": "homepage",
     "contact": "contactpage",
     "about": "aboutpage",
     "service": "servicepage"
+  },
+  enter: function(){
+    new EnterView();
   },
   homepage: function(){
     new HomeView();
@@ -56,7 +84,7 @@ var Router = Parse.Router.extend({
     new AboutView();
   },
   servicepage: function(){
-
+    new ServiceView();
   }
 });
 

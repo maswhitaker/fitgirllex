@@ -11,24 +11,74 @@ $third-color: #8B4A43;
 $font1: Exo;
 $font2: Actor;
 
-body{
-  background-color: $first-color;
-}
-
-header{
-  font-family: $font1;
-  #headerblock{
-    width: 200px;
+#enter-screen{
+  text-align: center;
+  #head{
+    position: absolute;
+      top: 0px;
+      left: -80px;
+    float: left;
+    margin-top: 100px;
+    transform: rotate(-45deg);
+  }
+  h1{
     color: white;
-    height: 100px;
-    background-color: $third-color;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
-    h1{
+    font-family: $font1;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 0px;
+  }
+  #names{
+    width: 30%;
+    position: absolute;
+      top: 50px;
+      right: 50px;
+    h2{
+      color: white;
+      font-family: $font1;
       text-align: center;
     }
   }
+  #center{
+    text-align: center;
+    img{
+      height: 500px;
+      margin-top: 100px;
+    }
+  }
+  a{
+    font-family: $font2;
+    font-size: 2em;
+    padding: 60px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    position: absolute;
+      top: 500px;
+      right: 50px;
+  }
+}
+
+body{
+  background-color: black;
+}
+
+#subhead{
+  text-align: center;
+  h1{
+    color: white;
+    font-size: 5em;
+    font-family: $font1;
+  }
+}
+
+header{
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: $font1;
+  border-radius: 10px 10px 0 0;
   h2{
     text-align: center;
     color: white;
@@ -36,21 +86,104 @@ header{
   }
   nav{
     height: 40px;
-    width: 100%;
+    width: 75%;
     background: $third-color;
-    border-bottom: solid 5px white;
     text-align: center;
+    border-radius: 10px;
+    @include outer-container;
+    a{
+      color: white;
+      text-decoration: none;
+      font-family: $font2;
+    }
     span{
       @include button(pill);
+      width: 15%;
       color: white;
+      margin-top: 5px;
+      @include span-columns(2.7);
     }
   }
+}
+
+#section1{
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid white;
+  width: 85%;
+  height: 400px;
+  background-image: url("../images/motivate.png");
+}
+
+#section2{
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid white;
+  width: 85%;
+  height: 400px;
+  background-image: url("../images/weights.png");
+}
+
+#section3{
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid white;
+  width: 85%;
+  height: 500px;
+  background-image: url("../images/arrow.png");
+}
+
+.description{
+  font-family: $font2;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+}
+
+section{
   img{
-    width: 95%;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 300px;
-    border-radius: 30px;
-    border: solid $second-color 2px;
+  float: right;
+    width: 300px;
   }
+  h1{
+    font-size: 5.5em;
+    color: black;
+    position: absolute;
+      top: 30px;
+      left: 30px;
+    font-family: $font1;
+  }
+  h2{
+  font-size: 4em;
+  font-family: $font1;
+  color: black;
+  position: absolute;
+    left: 30px;
+    top: 120px;
+    @media screen and (max-width: 600px){
+      position: absolute;
+        top: 300px;
+    }
+  }
+}
+
+#started{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+#paragraph{
+  color: white;
+  width: 50%;
+  font-family: $font2;
+}
+
+footer{
+
 }
